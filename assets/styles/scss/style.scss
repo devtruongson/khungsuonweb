@@ -1,0 +1,164 @@
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color          : currentColor;
+}
+
+.content-body {
+    padding: 6px 10px;
+
+}
+
+.border-solid {
+    border       : 1px solid #ccc;
+    padding      : 10px;
+    border-radius: 2px;
+}
+
+header {
+    display        : flex;
+    padding        : 6px 10px;
+    justify-content: space-between;
+    align-items    : center;
+    border-bottom  : 1px solid #ccc;
+}
+
+.header-left {
+    display: flex;
+    gap    : 6px;
+
+    .header-bar {
+        @extend .border-solid;
+    }
+
+    .logo {
+        @extend .border-solid;
+    }
+}
+
+.header-search {
+    @extend .border-solid;
+}
+
+.content-featured {
+    img {
+        width     : 100%;
+        min-height: 240px;
+        display   : block;
+        @extend .border-solid;
+        border-radius: 4px;
+    }
+
+    h1 {
+        margin-top: 10px;
+        @extend .border-solid;
+        padding    : 10px 6px;
+        font-weight: 700;
+        font-size  : 24px;
+        color      : #222;
+    }
+}
+
+.related-post {
+    margin-top: 10px;
+
+    .related-post-item {
+        @extend .border-solid;
+        margin-top: 10px;
+
+        a {
+            display: flex;
+            gap    : 10px;
+
+            div {
+                &:first-child {
+                    width: 38%;
+
+                    img {
+                        width: 100%;
+                        @extend .border-solid;
+                    }
+                }
+
+                &:last-child {
+                    h3 {
+                        font-weight: 600;
+                        font-size  : 18px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.section-post {
+    margin-top: 10px;
+    @extend .border-solid;
+    display        : flex;
+    flex-wrap      : wrap;
+    justify-content: space-between;
+
+    .section-post-item {
+        width: 49%;
+        @extend .border-solid;
+        margin-bottom: 6px;
+
+        img {
+            display: block;
+            height : 110px;
+            @extend .border-solid;
+        }
+
+        h4 {
+            margin-top: 4px;
+            @extend .border-solid;
+        }
+
+        &.width-100 {
+            width: 100%;
+        }
+    }
+}
+
+.title {
+    padding-top: 10px;
+    font-size  : 18px;
+    margin-top : 20px;
+    font-weight: 600;
+}
+
+.btn-view-more {
+    display        : flex;
+    justify-content: flex-end;
+    padding        : 20px 0;
+}
+
+.nav-bottom {
+    border-top      : 1px solid #ccc;
+    display         : flex;
+    justify-content : space-between;
+    position        : fixed;
+    bottom          : -100px;
+    width           : 100%;
+    left            : 0;
+    right           : 0;
+    background-color: #eee;
+    padding         : 10px 6px;
+    transition      : all linear .3s;
+
+    div {
+        @extend .border-solid;
+        padding: 10px 30px;
+    }
+
+    &.remove {
+        bottom: -100px;
+    }
+
+    &.show {
+        bottom: 0;
+    }
+}
