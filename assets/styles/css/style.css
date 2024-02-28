@@ -9,6 +9,7 @@ a {
 
 .content-body {
   padding: 6px 10px;
+  padding-bottom: 80px;
 }
 
 .border-solid, .nav-bottom div, .section-post .section-post-item h4, .section-post .section-post-item img, .section-post .section-post-item, .section-post, .related-post .related-post-item a div:first-child img, .related-post .related-post-item, .content-featured h1, .content-featured img, .header-search, .header-left .logo, .header-left .header-bar {
